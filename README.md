@@ -186,7 +186,7 @@ infra-azure-lakehouse/
 ├── variables.tf                          # Terraform variables file
 ├── outputs.tf                            # Extracted outputs for Python script
 ├── terraform.tfvars                      # Resource name values
-├── notebooks/                            # Databricks notebooks (.ipynb)
+├── notebooks/                            # Databricks notebooks (.py)
 │   ├── 1.0_Initialize.py
 │   ├── 2.0_ETL_Bronze_Layer.py
 │   ├── 2.5_Test_Bronze_Layer.py
