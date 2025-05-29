@@ -1,0 +1,5 @@
+subscription_id     = "08526481-6a0e-4a41-bc8b-9ad7a480019b"
+sql_admin           = "ghe-admin"
+sql_password        = "tb-lh2025"
+aad_admin_login     = "gerald.herrera@he-arc.ch"
+aad_admin_object_id = "02118986-cd73-4202-a962-3f319599108e"
