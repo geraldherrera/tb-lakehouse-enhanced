@@ -1,42 +1,44 @@
 output "databricks_workspace_url" {
-  description = "URL d’accès au workspace Databricks"
+  description = "Access URL of the Databricks workspace"
   value       = azurerm_databricks_workspace.databricks.workspace_url
 }
 
 output "databricks_workspace_name" {
-  description = "Nom du workspace Databricks"
+  description = "Name of the Databricks workspace"
   value       = azurerm_databricks_workspace.databricks.name
 }
 
 output "key_vault_name" {
-  description = "Nom du Key Vault"
+  description = "Name of the Key Vault"
   value       = azurerm_key_vault.kv.name
 }
 
 output "key_vault_uri" {
-  value = azurerm_key_vault.kv.vault_uri
+  description = "URI of the Key Vault"
+  value       = azurerm_key_vault.kv.vault_uri
 }
 
 output "key_vault_id" {
-  value = azurerm_key_vault.kv.id
+  description = "Resource ID of the Key Vault"
+  value       = azurerm_key_vault.kv.id
 }
 
 output "sql_server_name" {
-  description = "Nom du serveur SQL"
+  description = "Name of the SQL Server"
   value       = azurerm_mssql_server.sql_server.name
 }
 
 output "sql_database_name" {
-  description = "Nom de la base de données SQL"
+  description = "Name of the SQL database"
   value       = azurerm_mssql_database.sql_db.name
 }
 
 output "rg_datasource_name" {
-  description = "Nom du groupe de ressources pour les composants SQL/Key Vault"
+  description = "Resource group name for SQL/Key Vault components"
   value       = azurerm_resource_group.rg_datasource.name
 }
 
 output "rg_dataplatform_name" {
-  description = "Nom du groupe de ressources pour Databricks"
+  description = "Resource group name for Databricks"
   value       = azurerm_resource_group.rg_dataplatform.name
 }

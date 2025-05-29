@@ -1,79 +1,79 @@
-# Identifiant de l'abonnement Azure
+# Azure Subscription ID
 variable "subscription_id" {
-  description = "Azure Subscription ID utilisé pour le déploiement"
+  description = "Azure Subscription ID used for deployment"
   type        = string
 }
 
-# Région par défaut pour Databricks et les groupes de ressources
+# Default region for Databricks and general resource groups
 variable "location" {
-  description = "Région Azure pour Databricks et autres ressources générales"
+  description = "Azure region for Databricks and general resources"
   type        = string
   default     = "westeurope"
 }
 
-# Région dédiée au SQL Server (ex: Switzerland North)
+# Dedicated region for SQL Server (e.g., Switzerland North)
 variable "location_sql" {
-  description = "Région Azure pour le déploiement du serveur SQL"
+  description = "Azure region for SQL Server deployment"
   type        = string
   default     = "Switzerland North"
 }
 
-# Identifiants SQL
+# SQL credentials
 variable "sql_admin" {
-  description = "Nom d'utilisateur administrateur pour le serveur SQL"
+  description = "Administrator username for the SQL Server"
   type        = string
   sensitive   = true
 }
 
 variable "sql_password" {
-  description = "Mot de passe administrateur pour le serveur SQL"
+  description = "Administrator password for the SQL Server"
   type        = string
   sensitive   = true
 }
 
-# 
+# Entra ID admin credentials
 variable "aad_admin_login" {
-  description = "Login UPN de l'administrateur Entra ID"
+  description = "UPN login of the Entra ID administrator"
   type        = string
 }
 
 variable "aad_admin_object_id" {
-  description = "Object ID Azure AD de l'utilisateur administrateur"
+  description = "Azure AD Object ID of the administrator user"
   type        = string
 }
 
-# Noms de ressources
+# Resource names
 variable "rg_datasource_name" {
-  description = "Nom du groupe de ressources pour le serveur SQL et Key Vault"
+  description = "Resource group name for SQL Server and Key Vault"
   type        = string
 }
 
 variable "rg_dataplatform_name" {
-  description = "Nom du groupe de ressources pour Databricks"
+  description = "Resource group name for Databricks"
   type        = string
 }
 
 variable "sql_server_name" {
-  description = "Nom du serveur SQL"
+  description = "Name of the SQL Server"
   type        = string
 }
 
 variable "sql_database_name" {
-  description = "Nom de la base de données SQL"
+  description = "Name of the SQL database"
   type        = string
 }
 
 variable "key_vault_name" {
-  description = "Nom du Key Vault utilisé pour les secrets"
+  description = "Name of the Key Vault used for secrets"
   type        = string
 }
 
 variable "databricks_workspace_name" {
-  description = "Nom du workspace Databricks"
+  description = "Name of the Databricks workspace"
   type        = string
 }
 
 variable "databricks_managed_rg_name" {
-  description = "Nom du groupe de ressources managé automatiquement par Databricks"
+  description = "Name of the resource group automatically managed by Databricks"
   type        = string
 }

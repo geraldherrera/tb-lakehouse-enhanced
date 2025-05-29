@@ -5,13 +5,13 @@ provider "azurerm" {
 
 data "azurerm_client_config" "current" {}
 
-# Groupe de ressources pour SQL Server, DB et Key Vault
+# Resource group for SQL Server, database, and Key Vault
 resource "azurerm_resource_group" "rg_datasource" {
   name     = var.rg_datasource_name
   location = var.location_sql
 }
 
-# Groupe de ressources pour Databricks
+# Resource group for Databricks
 resource "azurerm_resource_group" "rg_dataplatform" {
   name     = var.rg_dataplatform_name
   location = var.location
@@ -36,7 +36,7 @@ resource "azurerm_mssql_server" "sql_server" {
   }
 }
 
-# SQL Database avec configuration compatible abonnement étudiant
+# SQL Database with configuration compatible with student subscriptions
 resource "azurerm_mssql_database" "sql_db" {
   name                                = var.sql_database_name
   server_id                           = azurerm_mssql_server.sql_server.id
@@ -67,7 +67,7 @@ resource "azurerm_key_vault" "kv" {
   }
 }
 
-# Secrets dans le Key Vault
+# Secrets in the Key Vault
 resource "azurerm_key_vault_secret" "sql_username" {
   name         = "sql-username"
   value        = var.sql_admin
