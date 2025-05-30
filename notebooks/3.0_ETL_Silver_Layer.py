@@ -118,7 +118,7 @@ def process_scd2(table_bronze):
 
         silver_df = spark.table(full_silver).filter("is_current = true")
 
-        # Creating a Cipher key for matching
+        # Creating a surrogate key for matching
         for pk in primary_keys:
             bronze_hashed = bronze_hashed.withColumn(f"_pk_{pk}", coalesce(col(pk).cast("string"), lit("__NULL__")))
             silver_df = silver_df.withColumn(f"_pk_{pk}", coalesce(col(pk).cast("string"), lit("__NULL__")))
