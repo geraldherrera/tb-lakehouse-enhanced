@@ -1,0 +1,10 @@
+# .gitignore
+*.tfstate
+*.tfstate.backup
+.terraform/
+.terraform.*
+secrest.auto.tfvars
+crash.log
+terraform.tfplan
+.DS_Store
+*.mmd
