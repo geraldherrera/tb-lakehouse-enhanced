@@ -126,12 +126,12 @@ Once infrastructure is deployed and notebooks are imported, a Databricks workflo
 By default this workflow is called **`lakehouse_etl_pipeline-ghe`**. It follows a three-layer architecture with the following tasks:
 
 ```
-| Task                 | Notebook Path                                                       | Dependency          |
-|----------------------|---------------------------------------------------------------------|---------------------|
-| `task_bronze_ghe`    | `/Workspace/Users/<your-email@domain.com>/12_ETL_Bronze_PyPsark`    | None                |
-| `task_silver_ghe`    | `/Workspace/Users/<your-email@domain.com>/22_ETL_Silver_PySpark.py` | `task_bronze_ghe`   |
-| `task_gold_dim_ghe`  | `/Workspace/Users/<your-email@domain.com>/33_ETL_Gold_Dim_PySpark.p`| `task_silver_ghe`   |
-| `task_gold_fact_ghe` | `/Workspace/Users/<your-email@domain.com>/33_ETL_Gold_Dim_PySpark.p`| `task_gold_dim_ghe` |
+| Task                 | Notebook Path                                                        | Dependency          |
+|----------------------|----------------------------------------------------------------------|---------------------|
+| `task_bronze_ghe`    | `/Workspace/Users/<your-email@domain.com>/12_ETL_Bronze_PyPsark`     | None                |
+| `task_silver_ghe`    | `/Workspace/Users/<your-email@domain.com>/22_ETL_Silver_PySpark.py`  | `task_bronze_ghe`   |
+| `task_gold_dim_ghe`  | `/Workspace/Users/<your-email@domain.com>/33_ETL_Gold_Dim_PySpark.py`| `task_silver_ghe`   |
+| `task_gold_fact_ghe` | `/Workspace/Users/<your-email@domain.com>/33_ETL_Gold_Dim_PySpark.py`| `task_gold_dim_ghe` |
 ```
 
 Each task runs on the personal cluster preconfigured by the script.
@@ -182,7 +182,7 @@ infra-azure-lakehouse/
 │   ├── 33_ETL_Gold_Dim_PySpark.py
 │   └── 34_ETL_Gold_Fact_PySpark.py
 ├── finalize_databricks_deployment.py     # Python post-deployment script
-├── dashboard_example.pbix               # Power BI dashboard example
+├── dashboard_example.pbix                # Power BI dashboard example
 └── README.md                             # This file
 ```
 ## Notes
