@@ -1,3 +1,19 @@
+##############################################
+#                                            #
+#   DISCLAIMER                               #
+#                                            #
+#   This code was written by                 #
+#   Gerald Herrera on 2025-07-20.            #
+#                                            #
+#   It was developed as part of my Bachelor  #
+#   thesis project on Lakehouse architecture.#
+#                                            #
+#   It reflects the context and knowledge    #
+#   at that date and may not be suitable     #
+#   for production use.                      #
+#                                            #
+##############################################
+
 output "databricks_workspace_url" {
   description = "Access URL of the Databricks workspace"
   value       = azurerm_databricks_workspace.databricks.workspace_url

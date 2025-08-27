@@ -1,3 +1,19 @@
+##############################################
+#                                            #
+#   DISCLAIMER                               #
+#                                            #
+#   This notebook was written by             #
+#   Gerald Herrera on 2025-07-20.            #
+#                                            #
+#   It was developed as part of my Bachelor  #
+#   thesis project on Lakehouse architecture.#
+#                                            #
+#   It reflects the context and knowledge    #
+#   at that date and may not be suitable     #
+#   for production use.                      #
+#                                            #
+##############################################
+
 # Databricks notebook source
 # MAGIC %md
 # MAGIC # Loading the Fact tables in the Gold layer
